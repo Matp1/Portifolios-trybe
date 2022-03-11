@@ -1,4 +1,9 @@
-const assert = require('assert'); // Sintaxe para incluir o módulo assert
-
-assert.strictEqual(50, 50); // Sem erros: 50 === 50
-assert.strictEqual(50, 70); // AssertionError: 50 !== 70
+function sum(a, b) {
+    if (typeof a !== 'number' || typeof b !== 'number') {
+      throw new Error('parameters must be numbers');
+    }
+  
+    return a + b;
+  }
+  
+  module.exports = sum
